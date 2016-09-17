@@ -1,0 +1,19 @@
+表现层技术 Struts
+
+目录
+一.概述
+Struts目的是减少web应用开发时间的一种表现层技术。
+MVC模式 指的是 Model View Controller
+Model指的是应用的业务逻辑 通过javabean EJB实现
+View指的是应用的的表现面 由jsp页面实现
+Controller指的是应用的处理过程控制 一般式servlet
+这种设计模式把应用逻辑、处理过程、显示逻辑分成不同的组件实现，之间可以进行交互和重用。可以减弱业务逻辑接口和数据接口之间的耦合性并让视图层更富有变化。
+
+二.Struts体系结构与工作原理
+Struts是mvc框架的具体实现，将servlet和jsp标记用作实现的一部分。
+
+Client Browser 客户端浏览器：从客户端浏览器发送http请求引发一个事件，该事件由web容器接收并返回http响应。
+Controller 控制器： controller 接收客户端浏览器的请求，并决定该请求的发送给谁处理。在该框架中由servlet实现。
+Business Logic 业务逻辑： 用来更新Model的状态并帮助控制整个应用程序流程，该框架中由Action类实现业务逻辑。
+Model State 模型状态： 代表了应用程序的状态，ActionForm Bean 代表了一个model在session或request域的状态信息，视图端的jsp文件可以利用ActionForm Bean 来将相应的信息读取出来。
+View 视图：在Struts框架中View就是JSP文件，视图文件不包含业务逻辑、流程逻辑、模型信息，只有tag标签。
