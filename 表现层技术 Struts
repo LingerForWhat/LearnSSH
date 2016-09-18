@@ -17,3 +17,15 @@ Controller 控制器： controller 接收客户端浏览器的请求，并决定
 Business Logic 业务逻辑： 用来更新Model的状态并帮助控制整个应用程序流程，该框架中由Action类实现业务逻辑。
 Model State 模型状态： 代表了应用程序的状态，ActionForm Bean 代表了一个model在session或request域的状态信息，视图端的jsp文件可以利用ActionForm Bean 来将相应的信息读取出来。
 View 视图：在Struts框架中View就是JSP文件，视图文件不包含业务逻辑、流程逻辑、模型信息，只有tag标签。
+
+模型
+在struts体系中，模型分为两个部分：1.系统内部状态 2.可改变状态的操作（事务逻辑）
+内部状态通常由一组ActionForm Bean表示
+业务逻辑的操作由Action、ActionMapping、ActionForward 几个组件完成。其中Action是真正业务逻辑实现者，对数据库进行增删改查操作；ActionMapping和ActionForward制定业务逻辑流程的运行方向。
+
+视图
+主要由JSP建立，Struts包含自己的标签库（Bean Tags、HTML Tags、Logic Tags、Nested Tags、Template Tags），简化创建用户界面
+
+控制器
+基本控制器是ActionServlet类中的实例servlet，通常在web.xml文件中定义。
+Bu
