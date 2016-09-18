@@ -1,1 +1,1 @@
-这是个人学习struts笔记及demo，提炼出重点以便复习之用。
+这是个人学习SSH(Struts+Spring+Hibernate)笔记及demo，提炼出重点以便复习之用。
